@@ -12,6 +12,7 @@
  :post-date-format     "yyyy-MM-dd"
  :archive-group-format "yyyy MMMM"
  :theme                "freeston"
+ :sass-src             []
  :resources            ["img"]
  :keep-files           [".git"]
  :disqus?              false
