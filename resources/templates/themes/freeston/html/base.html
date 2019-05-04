@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="img/favicon.ico">
+    <title>{{title}}</title>
+    <link rel="canonical" href="{{site-url}}{{uri}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    {% style "css/base.css" %}
+  </head>
+  <body>
+    <div><a href="{{index-uri}}" class="title-link">freeston.me</a></div>
+
+    <nav>
+      <ul>
+	<li><a href="{{index-uri}}">Home</a></li>
+        <li><a href="{{archives-uri}}">Archives</a></li>
+	<li><a href="{{tags-uri}}">Tags</a></li>
+        <li><a href="{{rss-uri}}">RSS</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      {% block content %}
+      {% endblock %}
+    </article>
+        
+    <footer>Copyright &copy; {{today|date:yyyy}} {{author}}</footer>
+    
+    {% script "js/highlight.pack.js" %}
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

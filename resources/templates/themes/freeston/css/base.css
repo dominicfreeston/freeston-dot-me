@@ -1,0 +1,66 @@
+@import "normalize.css";
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraSans+Condensed:300,400,600');
+
+body {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 24px;
+    max-width: 32em;
+    color: #131516;
+}
+
+
+p {
+    margin-top: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+a:link { color: #373d3f; }
+a:visited { color: #373d3f}
+a:hover { color: #555f61; }
+
+nav {
+    margin-bottom: 30px;
+}
+
+nav li {
+    margin-right: 12px;
+    display: inline;    
+}
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 12px;
+    list-style-type: none;
+}
+
+.date {
+    font-style: italic;
+}
+
+a.title-link:link, a.title-link:visited {
+    text-decoration: none;
+    color: #131516;
+}
+
+.hljs {
+    background: transparent;
+}
+
+.post-tags {
+    margin-top: 36px;
+}
+
+footer {
+    margin-top: 48px;
+}
+

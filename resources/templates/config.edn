@@ -1,0 +1,22 @@
+{:site-title           "freeston.me"
+ :author               "Dominic Freeston"
+ :description          "Another tech blog, probably."
+ :site-url             "https://freeston.me/"
+ :post-root            "posts"
+ :page-root            "pages"
+ :tag-root-uri         "tags"
+ :blog-prefix          "/"
+ :rss-name             "feed.xml"
+ :rss-filters          []
+ :recent-posts         3
+ :post-date-format     "yyyy-MM-dd"
+ :archive-group-format "yyyy MMMM"
+ :theme                "freeston"
+ :resources            ["img"]
+ :keep-files           [".git"]
+ :disqus?              false
+ :ignored-files        [#"\.#.*" #".*\.swp$"]
+ :previews?            false
+ :clean-urls?          true
+ :hide-future-posts?   true
+ :debug?               false}
