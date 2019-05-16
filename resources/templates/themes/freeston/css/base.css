@@ -40,7 +40,11 @@ ul {
 
 ol {
     padding-left: 12px;
-    list-style-type: none;
+}
+
+.footnotes {
+    margin-top: 36px;
+    font-size: smaller;
 }
 
 .date {
