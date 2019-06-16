@@ -18,6 +18,6 @@
  :disqus?              false
  :ignored-files        [#"\.#.*" #".*\.swp$"]
  :previews?            false
- :clean-urls?          true
+ :clean-urls           :trailing-slash
  :hide-future-posts?   true
  :debug?               false}
