@@ -5,7 +5,7 @@
  :post-root            "posts"
  :page-root            "pages"
  :tag-root-uri         "tags"
- :blog-prefix          "/"
+ :blog-prefix          ""
  :rss-name             "feed.xml"
  :rss-filters          []
  :recent-posts         3
