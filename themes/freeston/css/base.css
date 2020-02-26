@@ -72,3 +72,18 @@ footer {
     margin-top: 48px;
 }
 
+.row {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0;
+}
+.item {
+  display: table-cell;
+  vertical-align: top;
+}
+.item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
