@@ -1,15 +1,36 @@
 @import "normalize.css";
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraSans+Condensed:300,400,600');
+@import url('');
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    font-style: normal;
+    font-weight: 300; /* light */
+    src: url(/fonts/FiraSansCondensed-Light.woff) format('woff');
+}
+			
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    font-style: normal;
+    font-weight: 400; /* regular */
+    src: url(/fonts/FiraSansCondensed-Regular.woff) format('woff');
+}
+			
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    font-style: normal;
+    font-weight: 600; /* semibold */
+    src: url(/fonts/FiraSansCondensed-SemiBold.woff) format('woff');
+}
 
 body {
     font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 300;
+    font-size: 13pt;
     margin: 0 auto;
     padding: 24px;
     max-width: 32em;
     color: #131516;
 }
-
 
 p {
     margin-top: 12px;
@@ -30,6 +51,7 @@ a:hover { color: #555f61; }
 
 nav {
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
 nav li {
@@ -55,6 +77,10 @@ ol {
     font-style: italic;
 }
 
+.freeston-title {
+    font-weight: 400;
+}
+
 a.title-link:link, a.title-link:visited {
     text-decoration: none;
     color: #131516;
@@ -62,6 +88,7 @@ a.title-link:link, a.title-link:visited {
 
 .hljs {
     background: transparent;
+    font-size: 11pt;
 }
 
 .post-tags {
