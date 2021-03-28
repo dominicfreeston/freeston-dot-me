@@ -1,25 +1,27 @@
 @import "normalize.css";
-@import url('');
 
 @font-face {
     font-family: 'Fira Sans Condensed';
     font-style: normal;
     font-weight: 300; /* light */
-    src: url(/fonts/FiraSansCondensed-Light.woff) format('woff');
+    src: local('Fira Sans Condensed Light'), url(/fonts/FiraSansCondensed-Light.woff2) format('woff2'), url(/fonts/FiraSansCondensed-Light.woff) format('woff');
+    font-display: swap;
 }
 			
 @font-face {
     font-family: 'Fira Sans Condensed';
     font-style: normal;
     font-weight: 400; /* regular */
-    src: url(/fonts/FiraSansCondensed-Regular.woff) format('woff');
+    src: local('Fira Sans Condensed Regular'), url(/fonts/FiraSansCondensed-Regular.woff2) format('woff2'), url(/fonts/FiraSansCondensed-Regular.woff) format('woff');
+    font-display: swap;
 }
 			
 @font-face {
     font-family: 'Fira Sans Condensed';
     font-style: normal;
     font-weight: 600; /* semibold */
-    src: url(/fonts/FiraSansCondensed-SemiBold.woff) format('woff');
+    src: local('Fira Sans Condensed SemiBold'), url(/fonts/FiraSansCondensed-SemiBold.woff2) format('woff2'), url(/fonts/FiraSansCondensed-SemiBold.woff) format('woff');
+    font-display: swap;
 }
 
 body {
