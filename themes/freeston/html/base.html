@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
     <title>{{title}}</title>
     <link rel="canonical" href="{{site-url}}{{uri}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Light.woff" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Regular.woff" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-SemiBold.woff" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Light.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/FiraSansCondensed-SemiBold.woff2" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
-    {% style "css/base.css" %}
+    {% style "/css/base.css" %}
   </head>
   <body>
     <div><a href="{{index-uri}}" class="freeston-title title-link">freeston.me</a></div>
@@ -31,7 +31,7 @@
         
     <footer>Copyright &copy; {{today|date:yyyy}} {{author}}</footer>
     
-    {% script "js/highlight.pack.js" %}
+    {% script "/js/highlight.pack.js" %}
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
