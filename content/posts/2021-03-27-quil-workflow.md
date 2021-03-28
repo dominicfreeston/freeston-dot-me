@@ -4,7 +4,7 @@
 :tags ["art" "clojure" "quil"]
 }
 
-![](/img/workflow/ring.png)
+![](/img/workflow/ring.jpg)
 
 ## Context
 I've been making generative artwork in [Clojure](https://clojure.org/) using [Quil](http://quil.info/) for just over 2 years now. Over time I've evolved a workflow that enables me to experiment quickly whilst reducing the risk of losing interesting results and avenues for exploration.

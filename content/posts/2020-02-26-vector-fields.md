@@ -5,7 +5,7 @@
 }
 
 <div align=center>
-<img src="/img/vectorfields/orange.png" width=70% />
+<img src="/img/vectorfields/orange.jpg" width=70% />
 </div>
 
 A budding generative artist will, sooner or later, play with [vector fields](https://en.wikipedia.org/wiki/Vector_field)[^colors].
@@ -17,13 +17,13 @@ tweaking a dozen or so parameters.
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/fur-1.png" />
+  <img src="/img/vectorfields/fur-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/fur-2.png" />
+	<img src="/img/vectorfields/fur-2.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/fur-3.png" />
+	<img src="/img/vectorfields/fur-3.jpg" />
   </div>
 </div>
 
@@ -31,20 +31,20 @@ By restricting the starting point of the flow lines and letting them run long in
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/smoke-1.png" />
+  <img src="/img/vectorfields/smoke-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/smoke-2.png" />
+	<img src="/img/vectorfields/smoke-2.jpg" />
   </div>
 </div>
 
 
 <div class="row">
   <div class="item">
-	<img src="/img/vectorfields/bw-2.png" />
+	<img src="/img/vectorfields/bw-2.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/bw-3.png" />
+	<img src="/img/vectorfields/bw-3.jpg" />
   </div>
 </div>
 
@@ -52,10 +52,10 @@ Maintaining the high step-size through the noise field but ensuring the field st
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/neon-1.png" />
+  <img src="/img/vectorfields/neon-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/neon-2.png" />
+	<img src="/img/vectorfields/neon-2.jpg" />
   </div>
 </div>
 
@@ -63,24 +63,24 @@ Swap for filled shapes defined by short lines for some winding vine-like effects
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/plant-1.png" />
+  <img src="/img/vectorfields/plant-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/plant-2.png" />
+	<img src="/img/vectorfields/plant-2.jpg" />
   </div>
   <div class="item">
-  <img src="/img/vectorfields/plant-3.png" />
+  <img src="/img/vectorfields/plant-3.jpg" />
   </div>
 </div>
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/wp-red.png" />
+  <img src="/img/vectorfields/wp-red.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/wp-green.png" />
+	<img src="/img/vectorfields/wp-green.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/wp-purple.png" />
+	<img src="/img/vectorfields/wp-purple.jpg" />
   </div>
 </div>
 
@@ -88,18 +88,18 @@ Extend the length of the lines defining some heavily layered shapes for some dyn
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/dream-1.png" />
+  <img src="/img/vectorfields/dream-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/dream-2.png" />
+	<img src="/img/vectorfields/dream-2.jpg" />
   </div>
 </div>
 <div class="row">
   <div class="item">
-	<img src="/img/vectorfields/dream-3.png" />
+	<img src="/img/vectorfields/dream-3.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/dream-4.png" />
+	<img src="/img/vectorfields/dream-4.jpg" />
   </div>
 </div>
 
@@ -107,18 +107,18 @@ Pairing flow lines at random and layering resulting shapes can create some inter
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/blue-0.png" />
+  <img src="/img/vectorfields/blue-0.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/blue-1.png" />
+	<img src="/img/vectorfields/blue-1.jpg" />
   </div>
 </div>
 <div class="row">
   <div class="item">
-	<img src="/img/vectorfields/blue-2.png" />
+	<img src="/img/vectorfields/blue-2.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/blue-3.png" />
+	<img src="/img/vectorfields/blue-3.jpg" />
   </div>
 </div>
 
@@ -127,10 +127,10 @@ Different combinations of layered semi-transparent shapes from grouping multiple
 
 <div class="row">
   <div class="item">
-  <img src="/img/vectorfields/paint-1.png" />
+  <img src="/img/vectorfields/paint-1.jpg" />
   </div>
   <div class="item">
-	<img src="/img/vectorfields/paint-2.png" />
+	<img src="/img/vectorfields/paint-2.jpg" />
   </div>
 </div>
 
