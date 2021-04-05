@@ -13,4 +13,5 @@ The grids and repetition create a pleasing sense of regularity whilst the random
 
 Every time you load this page you'll get a different image below:
 ![](https://protected-brook-19426.herokuapp.com/)
+
 (It may take a while to load because it's on a free heroku instance and spins down after 30min of inactivity)
