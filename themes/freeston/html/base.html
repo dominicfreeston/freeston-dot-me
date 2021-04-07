@@ -6,6 +6,8 @@
     <title>{{title}}</title>
     <link rel="canonical" href="{{site-url}}{{uri}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block og-meta %}
+    {% endblock %}
     <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Light.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="/fonts/FiraSansCondensed-Regular.woff2" type="font/woff2" crossorigin>
     <link rel="preload" as="font" href="/fonts/FiraSansCondensed-SemiBold.woff2" type="font/woff2" crossorigin>

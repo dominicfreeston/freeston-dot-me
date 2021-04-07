@@ -2,9 +2,8 @@
 :title "Day One of Thirty-Five"
 :layout :post
 :tags ["art", "drawing"]
+:image "/img/thirty-five/2021-04-06-1107-37-465181691510604.jpg"
 }
-
-![](/img/thirty-five/2021-04-06-1107-37-465181691510604.jpg)
 
 After the long Easter weekend and another day off ahead of me, I was feeling rather at peace this morning and so for day one of [my challenge](/posts/2021-04-05-thirty-five/) I channelled the beautiful skies outside my window.
 

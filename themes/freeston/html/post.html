@@ -1,4 +1,11 @@
 {% extends "/html/base.html" %}
+{% block og-meta %}
+<meta property="og:title" content="{{post.title}}" />
+{% if post.image|not-empty %}
+<meta property="og:image" content="https://freeston.me{{post.image}}" />
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <div id="post">
   {% include "/html/post-content.html" %}
