@@ -6,7 +6,7 @@
 
 ![](/img/thirty-five/intro.jpg)
 
-I've often struggled with consistency, and with taking things through to completion. For that reason, it felt like a huge achievement when I released my game at the end of last year. I kept the scope small and didn't let perfect get in the way of done; it's out and has found a small set of players with whom it has resonated.
+When it comes to personal projects, I've often struggled with consistency and taking things through to completion. For that reason, it felt like a huge achievement when I released my game at the end of last year. I kept the scope small and didn't let perfect get in the way of done; it's out and has found a small set of players with whom it has resonated.
 
 When it comes to creating generative art, I often hit what feels like a local maximum with an idea and struggle to either fully refine it or explore another direction altogether, leaving the work in a sort of limbo state where I neither see it as complete and worth sharing, nor ripe for further exploration.
 
