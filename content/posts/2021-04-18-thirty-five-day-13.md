@@ -1,7 +1,7 @@
 {
 :title "Day Thirteen of Thirty-Five"
 :layout :post
-:tags ["art", "drawing"]
+:tags ["art" "drawing" "thirty-five"]
 :image "/img/thirty-five/2021-04-18-2136-43-1001188309041625.jpg"
 }
 
