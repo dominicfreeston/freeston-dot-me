@@ -65,8 +65,17 @@ nav {
 }
 
 nav li {
-    margin-right: 12px;
+    margin-right: 16px;
     display: inline;    
+}
+
+ul.hlist {
+    display: inline;
+}
+
+ul.hlist li {
+    margin-right: 4px;
+    display: inline;
 }
 
 ul {
@@ -110,19 +119,48 @@ footer {
 }
 
 .row {
-  display: table;
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 0;
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .item {
-  display: table-cell;
-  vertical-align: top;
+    display: table-cell;
+    vertical-align: top;
 }
 
 .item img {
-  display: block;
-  width: 100%;
-  height: auto;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.project {
+    flex: 1;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 12px;
+    min-width: 8em;
+    margin: 4px 0;
+    padding: 16px 32px;
+    text-align: center;
+}
+
+.project h2 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+}
+
+.project p {
+    margin: 0px;
+    align-content: center;
 }

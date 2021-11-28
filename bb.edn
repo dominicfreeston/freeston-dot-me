@@ -1,0 +1,15 @@
+{:deps {markdown-clj/markdown-clj {:mvn/version "1.10.7"}}
+ :paths ["src"]
+ :tasks
+ {
+  clean {:doc "Deletes the target folder"
+         :task (shell "rm -rf public")}
+  build  {:doc "Builds the site into the public folder"
+         :requires ([freeston.core])
+          :task (freeston.core/-main)}
+  serve {:doc "Runs a minimal local server to view the site"
+         :requires ([freeston.server])
+         :task (do (freeston.core/-main)
+                   (freeston.server/start!))}
+  }}
+
