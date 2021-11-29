@@ -79,14 +79,16 @@
    :uri (fs/path "tags" (str/replace tag #"\s" "-"))
    :posts (filter #(some #{tag} (:tags %)) posts)})
 
+(defn get-all-tags [posts]
+  (reduce (fn [tags post]
+            (into tags (:tags post)))
+          #{}
+          posts))
+
 (defn build-tags [posts]
-  (let [tags (reduce (fn [tags post]
-                       (into tags (:tags post)))
-                     #{}
-                     posts)]
-    (map
-     #(build-tag % (map thin-post posts))
-     (sort tags))))
+  (map
+   #(build-tag % (map thin-post posts))
+   (sort (get-all-tags posts))))
 
 (defn replace-tags
   "Replace string tags with map tags inside posts"
@@ -139,13 +141,6 @@
   (run! #(render-resource % template) resources))
 
 (defn -main [& _args]
-  (comment (println (-> (parse-posts posts-src-path)
-                   second
-                   :body)))
-
-  (comment (println
-       (:tags (gather-data posts-src-path))))
-  
   (do
     (println "Generating site...")
     (let [data (gather-data posts-src-path)]
@@ -153,10 +148,10 @@
         (fs/create-dir public-dir))
       (copy-asset-dirs)
 
-      (println "\n Rendering Feed")
+      (println "\nRendering Feed")
       (spit (fs/file (fs/path public-dir "feed.xml")) (feed/rss data))
 
-      (println "\n Rendering Top Level")
+      (println "\nRendering Top Level")
       (render-resource (assoc data :name "home" :uri "")
                        template/home)
       (render-resource (assoc data :name "tags" :uri "tags")

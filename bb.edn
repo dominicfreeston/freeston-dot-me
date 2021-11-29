@@ -3,7 +3,8 @@
  :tasks
  {
   clean {:doc "Deletes the target folder"
-         :task (shell "rm -rf public")}
+         :requires ([babashka.fs :as fs])
+         :task (fs/delete-tree "public")}
   build  {:doc "Builds the site into the public folder"
          :requires ([freeston.core])
           :task (freeston.core/-main)}
@@ -11,5 +12,11 @@
          :requires ([freeston.server])
          :task (do (freeston.core/-main)
                    (freeston.server/start!))}
-  }}
+  tags {:doc "Print all the currently used tags"
+        :requires ([freeston.core :refer :all])
+        :task (prn (-> posts-src-path parse-posts get-all-tags sort))}
+  post {:doc "Creates a new blog post md file"
+        :task (spit
+               (str "content/posts/" (java.time.LocalDate/now) "-" (first *command-line-args*) ".md")
+               "{\n:title \"\"\n:layout :post\n:tags []\n}")}}}
 
