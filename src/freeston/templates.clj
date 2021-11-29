@@ -32,7 +32,7 @@
     [:link {:rel "icon" :href "/img/favicon.ico"}] 
     [:title "freeston.me"] 
     [:link {:rel "canonical," :href "https://freeston.me/"}] 
-    [:meta {:name "viewport," :content "width=device-width, initial-scale=1"}] 
+    [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}] 
     [:link {:rel "preload" :as "font" :href "/fonts/FiraSansCondensed-Light.woff2" :type "font/woff2" :crossorigin ""}]
     [:link {:rel "preload" :as "font" :href "/fonts/FiraSansCondensed-Regular.woff2" :type "font/woff2" :crossorigin ""}]
     [:link {:rel "preload" :as "font" :href "/fonts/FiraSansCondensed-SemiBold.woff2" :type "font/woff2" :crossorigin ""}]
