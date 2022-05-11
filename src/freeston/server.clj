@@ -36,7 +36,7 @@
    ))
 
 (defn app [req]
-  (println (:uri req))
+  (println "serving: "(:uri req))
   (let [uri (fs/path public-dir (str/replace-first (:uri req) "/" ""))
         uri (if (fs/exists? (fs/path uri "index.html"))
               (fs/path uri "index.html")
@@ -61,7 +61,5 @@
   (let [port (or port 8080)]
     (println (str "starting server on http://localhost:" port))
     (reset! server (s/run-server #'app {:port port})))
-  ;; There must be a better way to do this...
-  (loop []
-    (recur)))
+  @(promise))
 

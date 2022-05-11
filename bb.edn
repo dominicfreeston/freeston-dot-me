@@ -12,6 +12,9 @@
          :requires ([freeston.server])
          :task (do (freeston.core/-main)
                    (freeston.server/start!))}
+  watch {:doc "Like serve but also rebuilds the site on change"
+         :requires ([freeston.watch])
+         :task (freeston.watch/start!)}
   tags {:doc "Print all the currently used tags"
         :requires ([freeston.core :refer :all])
         :task (prn (-> posts-src-path parse-posts get-all-tags sort))}
