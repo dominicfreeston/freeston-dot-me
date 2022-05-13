@@ -57,7 +57,7 @@
 
     body
     
-    [:footer "Copyright © 2021 Dominic Freeston"] 
+    [:footer "Copyright © 2022 Dominic Freeston"] 
     [:script {:src "/js/highlight.pack.js" :type "application/javascript"}] 
     [:script "hljs.initHighlightingOnLoad();"]]])
 
