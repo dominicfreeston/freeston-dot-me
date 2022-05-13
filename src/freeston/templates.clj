@@ -74,11 +74,11 @@
     [:div.projects
      
      [:div.project 
-      [:h2 [:a (site-link {:uri "tags/thirty-five"} "Thirty-Five")]]
+      (site-link {:uri "tags/thirty-five"} [:h2 "Thirty-Five"])
       [:p "A thirty-five day challenge to produce one piece of generative art a day."]]
      
      [:div.project
-      [:h2 [:a {:href "https://www.thewallslider.com/"} "The Wallslider"]]
+      [:a {:href "https://www.thewallslider.com/"} [:h2 "The Wallslider"]]
       [:p "An endless retro wall-jumping game for iOS and Android."]]]
     
     [:h1 (str "Recent Posts")]
