@@ -32,18 +32,41 @@
 
 /* freeston.me stylesheet */
 
+:root {
+    --text-color: #131516;
+    --background-color: #f1efe4;
+    --pop-color: #f7e5b7;
+    --dark-pop-color: #f7dd9b;
+    --title-color: #824e06;
+    --link-color: var(--text-color);
+    --hover-color: #7f6f61;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    color: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    overflow-wrap: break-word;
+    border:0 solid;
+}
+
 body {
     font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 300;
-    font-size: 13pt;
+    font-size: 15pt;
+    line-height: 1.3;
     margin: 0 auto;
     padding: 24px;
     max-width: 32em;
-    color: #131516;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 p {
-    margin-top: 12px;
+    margin-block: 0.8rem;
 }
 
 img {
@@ -52,21 +75,53 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    line-height: 1;
     margin-bottom: 8px;
+    color: var(--title-color);
 }
 
-a:link { color: #373d3f; }
-a:visited { color: #373d3f}
-a:hover { color: #555f61; }
+a {
+    text-decoration-color: var(--hover-color);
+    text-decoration-style: dotted;
+    text-decoration-skip: spaces;
+}
+
+a:link { color: var(--link-color); }
+a:visited { color: var(--link-color); }
+a:hover { color: var(--hover-color); }
+
+ul {
+    padding: 0px;
+    list-style-type: none;
+}
+
+ol {
+    padding-left: 12px;
+}
 
 nav {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     font-weight: 400;
 }
 
-nav li {
-    margin-right: 16px;
-    display: inline;    
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 0.5rem;
+    justify-content: flex-start;
+    
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0.2rem 0.6rem;
+    border-radius: 16px;
+    background: var(--pop-color);
+}
+
+nav a:hover {
+    color: inherit;
+    background: var(--dark-pop-color);
 }
 
 ul.hlist {
@@ -76,15 +131,6 @@ ul.hlist {
 ul.hlist li {
     margin-right: 4px;
     display: inline;
-}
-
-ul {
-    padding: 0px;
-    list-style-type: none;
-}
-
-ol {
-    padding-left: 12px;
 }
 
 .footnotes {
@@ -97,12 +143,12 @@ ol {
 }
 
 .freeston-title {
-    font-weight: 400;
+    font-weight: 600;
 }
 
 a.title-link:link, a.title-link:visited {
     text-decoration: none;
-    color: #131516;
+    color: var(--title-color);
 }
 
 .hljs {
@@ -145,11 +191,9 @@ footer {
 
 .project {
     flex: 1;
-    border: solid;
-    border-color: black;
-    border-width: 2px;
-    border-radius: 12px;
-    min-width: 8em;
+    background-color: var(--pop-color);
+    border-radius: 4rem;
+    min-width: 10em;
     margin: 4px 0;
     padding: 16px 32px;
     text-align: center;
@@ -164,3 +208,7 @@ footer {
     margin: 0px;
     align-content: center;
 }
+
+/* Cluster Components  */
+
+
