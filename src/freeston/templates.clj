@@ -74,7 +74,7 @@
     [:div.projects
      
      [:div.project 
-      (site-link {:uri "tags/thirty-five"} [:h2 "Thirty-Five"])
+      (site-link {:uri "thirty-five"} [:h2 "Thirty-Five"])
       [:p "A thirty-five day challenge to produce one piece of generative art a day."]]
      
      [:div.project
@@ -133,12 +133,42 @@
                   (second group))]))
          (:archives data))]))
 
+;; Thirty-Five
+
+(defn thirty-five-post? [post]
+  (some #{"thirty-five"} (map :name (:tags post))))
+
+(defn add-thirty-five-link [post]
+  (if (thirty-five-post? post)
+    (assoc post :thing [:a {:href "/thirty-five"} "thirty-five"])
+    post))
+
+(defn thirty-five [data]
+  (base
+   []
+   (list
+    [:h1 "Thirty-Five"]
+    [:div.image-grid
+     (for [[i post] (map-indexed vector
+                                 (->> (:posts data)
+                                      (filter thirty-five-post?)
+                                      reverse ))]
+       (site-link
+        post
+        [:div
+         [:p (str (inc i))]
+         [:img {:src (:image post)}]]))]
+    
+    [:p "I set myself the challenge of creating a piece of generative art a day for 35 days and share them online. The goal was to tackle two of the things I find hold me back in my personal creative endevours: lack of consistency and a reluctance to share things in public."])))
+
+;; Post
+
 (defn post [post]
   (base
    (list
     [:meta {:property "og:title"
             :content (:title post)}]
-    (if-let [img (:image post)]
+    (when-let [img (:image post)]
       [:meta {:property "og:image"
               :content (str "https://freeston.me" img)}]))
    [:article
@@ -147,20 +177,22 @@
       [:div#post-meta
        [:h1
         (site-link {:class "title-link"} post :title)]
-       [:div.byline
-        [:span.date (display-date (:date post))]]]]
+       [:div.post-meta
+        [:span.date (display-date (:date post))]
+        (when (thirty-five-post? post)
+          [:a {:href "/thirty-five"} "Thirty-Five"])]]]
      
      [:div 
-      (if-let [img (:image post)]
+      (when-let [img (:image post)]
         [:p [:img {:src img}]])]
      
      (:html-body post)
      
      [:div.post-tags
       [:ul.hlist
-       (if-let [prev (:prev post)]
+       (when-let [prev (:prev post)]
          [:li (site-link prev "previous")])
-       (if-let [next (:next post)]
+       (when-let [next (:next post)]
          [:li (site-link next "next")])]
       [:br]
       [:b "Tags: "]

@@ -76,7 +76,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 1rem;
     color: var(--title-color);
 }
 
@@ -182,6 +182,23 @@ footer {
     height: auto;
 }
 
+.post-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-meta > a {
+    font-weight: 600;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    background: var(--pop-color);
+    text-decoration: none;
+}
+
+/* Home page project grid */
+
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -209,6 +226,29 @@ footer {
     align-content: center;
 }
 
-/* Cluster Components  */
+/* Image grid  */
 
+.image-grid {
+  display: grid;
+  grid-gap: 0.2rem;
+}
+
+.image-grid a {
+    line-height: 0;
+}
+
+.image-grid p {
+    position: absolute;
+    font-size: 0.75rem;
+    line-height: 1;
+    margin: 0;
+    padding: 0.2rem;
+    background-color: var(--background-color);
+}
+
+@supports (width: min(80px, 100%)) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(80px, 100%), 1fr));
+  }
+}
 

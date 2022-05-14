@@ -32,7 +32,7 @@
   file can be a string, a path or a file "
   
   [file]
-  (if-let [[_ year month day name] (re-matches #"([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md" (fs/file-name file))]
+  (when-let [[_ year month day name] (re-matches #"([0-9]{4})-([0-9]{2})-([0-9]{2})-(.*)\.md" (fs/file-name file))]
     (with-open [rdr (java.io.PushbackReader. (io/reader (fs/file file)))]
       (let [[_ uri] (re-matches #"(.*)\.md" (fs/file-name file))
             meta (edn/read rdr)
@@ -133,7 +133,7 @@
 
 (defn render-resource [resource template]
   (let [file (fs/file (fs/path public-dir (:uri resource) "index.html"))]
-    (println "rendering:" (:name resource) " -> " (str file))
+    (println "rendering:" (or (:name resource) (:uri resource)) " -> " (str file))
     (io/make-parents file)
     (spit file (html (template resource)))))
 
@@ -141,7 +141,7 @@
   (run! #(render-resource % template) resources))
 
 (defn -main [& _args]
-  (do
+  (do 
     (println "Generating site...")
     (let [data (gather-data posts-src-path)]
       (when (not (fs/exists? public-dir))
@@ -154,10 +154,13 @@
       (println "\nRendering Top Level")
       (render-resource (assoc data :name "home" :uri "")
                        template/home)
-      (render-resource (assoc data :name "tags" :uri "tags")
+      (render-resource (assoc data :uri "tags")
                        template/tags)
-      (render-resource (assoc data :name "archives" :uri "archives")
+      (render-resource (assoc data :uri "archives")
                        template/archives)
+      (render-resource (assoc data :uri "thirty-five")
+                       template/thirty-five)
+      
       (spit (fs/file (fs/path public-dir "404.html")) (html template/not-found))
       (println "\nRendering Posts")
       (render-resources (:posts data) template/post)
