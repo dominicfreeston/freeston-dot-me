@@ -99,6 +99,16 @@
                              (map #(get tags %) ts))))
          posts)))
 
+;; CV
+(defn parse-cv []
+  (with-open [rdr (java.io.PushbackReader. (io/reader (fs/file "content/cv.md")))]
+    (let [raw-body (slurp rdr)
+          html-body (md-to-html-string raw-body :footnotes? true)]
+      {:uri "cv"
+       :name "CV"
+       :raw-body raw-body
+       :html-body html-body})))
+
 ;; Combine it all
 
 (defn gather-data [dir]
@@ -106,7 +116,8 @@
         tags (build-tags posts)]
     {:posts (replace-tags posts tags)
      :tags tags
-     :archives (group-by-month posts)}))
+     :archives (group-by-month posts)
+     :cv (parse-cv)}))
 
 
 ;; Static Assets
@@ -156,10 +167,11 @@
                        template/home)
       (render-resource (assoc data :uri "tags")
                        template/tags)
-      (render-resource (assoc data :uri "archives")
+      (render-resource (assoc data :uri "posts")
                        template/archives)
       (render-resource (assoc data :uri "thirty-five")
                        template/thirty-five)
+      (render-resource (:cv data) template/cv)
       
       (spit (fs/file (fs/path public-dir "404.html")) (html template/not-found))
       (println "\nRendering Posts")

@@ -256,3 +256,11 @@ footer {
   }
 }
 
+.cv {
+    max-width: 32em;
+}
+
+.cv ul {
+    list-style-type: square;
+    font-size: 1rem;
+}

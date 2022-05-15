@@ -43,7 +43,7 @@
   [:nav 
    [:ul 
     [:li [:a {:href "/"} "Home"]]
-    [:li [:a {:href "/archives"} "Archives"]]
+    [:li [:a {:href "/posts"} "Posts"]]
     [:li [:a {:href "/tags"} "Tags"]]
     [:li [:a {:href "/feed.xml"} "RSS"]]]])
 
@@ -66,6 +66,12 @@
    []
    [:h1 [:a.title-link {:href "https://http.cat/404"} "404 - Page not found"]]))
 
+(defn cv [cv-data]
+  (base
+   []
+   [:div.cv
+    (:html-body cv-data)]))
+
 (defn home [data]
   (base
    []
@@ -86,10 +92,11 @@
      (map (fn [post]
             [:li (site-link post :title)])
           (take 5 (remove #(some #{"thirty-five"} (map :name (:tags %))) (:posts data))))]
-    (site-link {:uri "archives"} "More posts")
+    (site-link {:uri "posts"} "More posts")
 
     [:h1 "About"]
-    [:p "Welcome to my little corner of the internet. I'm an iOS developer by day and a sometimes-generative-artist, sometimes-indie-game-dev and general code tinkerer and procrastinator by night. The main tools I toy around with these days are " [:a {:href "https://clojure.org/"} "Clojure"] " and the " [:a {:href "https://godotengine.org/"} "Godot engine."]]]))
+    [:p "Welcome to my little corner of the internet. I'm Dominic, a software developer by day and a sometimes-generative-artist, sometimes-indie-game-dev and general code tinkerer and procrastinator by night. You can find out about my professional experience from " [:a {:href "/cv"} "my CV"] "."]
+    ]))
 
 (defn tags [data]
   (base
@@ -120,7 +127,7 @@
    []
    [:div
     [:div#page-header
-     [:h1 "Archives"]]
+     [:h1 "Posts"]]
     (map (fn [group]
            (list
             [:h4 (display-date (first group) :year-month)]
