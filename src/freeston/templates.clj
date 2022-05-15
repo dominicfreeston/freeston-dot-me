@@ -57,7 +57,7 @@
 
     body
     
-    [:footer "Copyright © 2022 Dominic Freeston"] 
+    [:footer "Copyright © 2022 Dominic Freeston (" [:a {:href "https://github.com/dominicfreeston/freeston-dot-me"} "View Source" ] ")"] 
     [:script {:src "/js/highlight.pack.js" :type "application/javascript"}] 
     [:script "hljs.initHighlightingOnLoad();"]]])
 
