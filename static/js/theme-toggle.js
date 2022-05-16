@@ -23,4 +23,6 @@ btn.addEventListener("click", function() {
     } else {
 	localStorage.removeItem("theme");
     }
+
+    btn.blur();
 });

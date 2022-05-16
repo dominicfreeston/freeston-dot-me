@@ -210,14 +210,10 @@ ul.hlist li {
     justify-content: flex-start;
 }
 
-#theme-toggle {
-    font-size: 1rem;
-}
-
 button#theme-toggle {
-    height: 1rem;
-    width: 1rem;
-    border-radius: 1rem;
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 0.8rem;
     background: var(--title-color);
 }
 

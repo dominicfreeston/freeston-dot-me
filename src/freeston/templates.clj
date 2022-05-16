@@ -53,8 +53,9 @@
    (head h-seq)
    [:body 
     [:div.header
+     [:a {:href "/" :class "freeston-title title-link"} "freeston"]
      [:button#theme-toggle {:type "button"} ""]
-     [:a {:href "/" :class "freeston-title title-link"} "freeston.me"]]
+     [:a {:href "/" :class "freeston-title title-link"} "me"]]
     top-nav
 
     body
