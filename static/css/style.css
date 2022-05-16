@@ -213,12 +213,15 @@ ul.hlist li {
 button#theme-toggle {
     height: 0.8rem;
     width: 0.8rem;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
+    font-size: 0;
     background: var(--title-color);
 }
 
-button#theme-toggle:hover {
-    background: var(--dark-pop-color);
+@media (hover: hover) {
+    button#theme-toggle:hover {
+	background: var(--dark-pop-color);
+    }
 }
 
 .date {
