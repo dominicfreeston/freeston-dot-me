@@ -83,12 +83,12 @@
     [:h1 "Projects"]
     [:div.projects
      
-     [:div.project 
-      (site-link {:uri "thirty-five"} [:h2 "Thirty-Five"])
+     [:a.project {:href "/thirty-five"}
+      [:h2 "Thirty-Five"]
       [:p "A thirty-five day challenge to produce one piece of generative art a day."]]
      
-     [:div.project
-      [:a {:href "https://www.thewallslider.com/"} [:h2 "The Wallslider"]]
+     [:a.project {:href "https://www.thewallslider.com/"}
+      [:h2 "The Wallslider"]
       [:p "An endless retro wall-jumping game for iOS and Android."]]]
     
     [:h1 (str "Recent Posts")]
