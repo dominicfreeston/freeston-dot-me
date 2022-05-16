@@ -52,12 +52,15 @@
    {:lang "en"} 
    (head h-seq)
    [:body 
-    [:div [:a {:href "/" :class "freeston-title title-link"} "freeston.me"]]
+    [:div.header
+     [:button#theme-toggle {:type "button"} ""]
+     [:a {:href "/" :class "freeston-title title-link"} "freeston.me"]]
     top-nav
 
     body
     
-    [:footer "Copyright © 2022 Dominic Freeston (" [:a {:href "https://github.com/dominicfreeston/freeston-dot-me"} "View Source" ] ")"] 
+    [:footer "Copyright © 2022 Dominic Freeston (" [:a {:href "https://github.com/dominicfreeston/freeston-dot-me"} "View Source" ] ")"]
+    [:script {:src "/js/theme-toggle.js" :type "application/javascript"}]
     [:script {:src "/js/highlight.pack.js" :type "application/javascript"}] 
     [:script "hljs.initHighlightingOnLoad();"]]])
 
