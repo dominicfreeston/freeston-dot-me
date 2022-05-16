@@ -182,32 +182,33 @@
     (when-let [img (:image post)]
       [:meta {:property "og:image"
               :content (str "https://freeston.me" img)}]))
-   [:article
-    [:div#post
-     [:div.post-header
-      [:div#post-meta
-       [:h1
-        (site-link {:class "title-link"} post :title)]
-       [:div.post-meta
-        [:span.date (display-date (:date post))]
-        (when (thirty-five-post? post)
-          [:a {:href "/thirty-five"} "Thirty-Five"])]]]
-     
-     [:div 
-      (when-let [img (:image post)]
-        [:p [:img {:src img}]])]
-     
-     (:html-body post)
-     
-     [:div.post-tags
-      [:ul.hlist
-       (when-let [prev (:prev post)]
-         [:li (site-link prev "previous")])
-       (when-let [next (:next post)]
-         [:li (site-link next "next")])]
-      [:br]
-      [:b "Tags: "]
-      [:ul.hlist
-       (map (fn [tag] [:li (site-link tag :name)]) (:tags post))]]]]))
+   [:div
+    [:article
+     [:div#post
+      [:div.post-header
+       [:div#post-meta
+        [:h1
+         (site-link {:class "title-link"} post :title)]
+        [:div.post-meta
+         [:span.date (display-date (:date post))]
+         (when (thirty-five-post? post)
+           [:a {:href "/thirty-five"} "Thirty-Five"])]]]
+      
+      [:div 
+       (when-let [img (:image post)]
+         [:p [:img {:src img}]])]
+      
+      (:html-body post)]]
+
+    [:div.post-tags
+     [:h2 "Read More"]
+     [:ul
+      (when-let [prev (:prev post)]
+        [:li [:b "Prev: "](site-link prev :title)])
+      (when-let [next (:next post)]
+        [:li [:b "Next: "] (site-link next :title)])
+      [:li [:b "Tags: "]
+       [:ul.hlist
+        (map (fn [tag] [:li (site-link tag :name)]) (:tags post))]]]]]))
 
 

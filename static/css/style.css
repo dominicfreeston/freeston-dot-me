@@ -237,8 +237,21 @@ a.title-link:link, a.title-link:visited {
     color: var(--title-color);
 }
 
+.footnotes {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+    border-top: 1px;
+    border-style: dotted;
+}
+
 .post-tags {
-    margin-top: 36px;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+.post-tags h2 {
+    font-size: 1.3rem;
 }
 
 footer {
