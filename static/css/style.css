@@ -37,7 +37,8 @@
     --background-color: #f1efe4;
     --pop-color: #f7e5b7;
     --dark-pop-color:  #ea8f10;
-    --title-color: #824e06;
+    --title-color: #ea8f10;
+    --toggle-hover-color: var(--pop-color);
     --link-color: var(--text-color);
     --hover-color: var(--dark-pop-color);
 
@@ -57,6 +58,7 @@
     --pop-color: #222;
     --dark-pop-color: #ea8f10;
     --title-color: #f7dd9b;
+    --toggle-hover-color: var(--dark-pop-color);
     --link-color: var(--text-color);
     --hover-color: var(--dark-pop-color);
 
@@ -79,6 +81,7 @@
       --pop-color: #222;
       --dark-pop-color: #ea8f10;
       --title-color: #f7dd9b;
+      --toggle-hover-color: var(--dark-pop-color);
       --link-color: var(--text-color);
       --hover-color: var(--dark-pop-color);
       
@@ -97,7 +100,8 @@
       --background-color: #f1efe4;
       --pop-color: #f7e5b7;
       --dark-pop-color:  #ea8f10;
-      --title-color: #824e06;
+      --title-color: #ea8f10;
+      --toggle-hover-color: var(--pop-color);
       --link-color: var(--text-color);
       --hover-color: var(--dark-pop-color);
       
@@ -220,7 +224,7 @@ button#theme-toggle {
 
 @media (hover: hover) {
     button#theme-toggle:hover {
-	background: var(--dark-pop-color);
+	background: var(--toggle-hover-color);
     }
 }
 
@@ -318,8 +322,8 @@ footer {
     text-decoration: none;
 }
 
-.project:hover {
-    color: inherit;
+.project:hover, .project:hover h2 {
+    color: #ffeed6;
     background-color: var(--dark-pop-color);
 }
 
