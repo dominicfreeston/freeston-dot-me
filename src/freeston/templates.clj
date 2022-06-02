@@ -70,11 +70,12 @@
    []
    [:h1 [:a.title-link {:href "https://http.cat/404"} "404 - Page not found"]]))
 
-(defn cv [cv-data]
+(defn md-page [data]
   (base
    []
-   [:div.cv
-    (:html-body cv-data)]))
+   [:div
+    (select-keys data [:class])
+    (:html-body data)]))
 
 (defn home [data]
   (base

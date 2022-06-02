@@ -100,16 +100,28 @@
          posts)))
 
 ;; CV
-(defn parse-cv []
-  (with-open [rdr (java.io.PushbackReader. (io/reader (fs/file "content/cv.md")))]
+(defn parse-md-page [props]
+  (with-open [rdr (-> props
+                      :source
+                      fs/file
+                      io/reader
+                      java.io.PushbackReader.)]
     (let [raw-body (slurp rdr)
           html-body (md-to-html-string raw-body :footnotes? true)]
-      {:uri "cv"
-       :name "CV"
-       :raw-body raw-body
-       :html-body html-body})))
+      (assoc props
+             :raw-body raw-body
+             :html-body html-body))))
 
 ;; Combine it all
+
+(def pages
+  [{:source "content/cv.md"
+    :uri "cv"
+    :name "CV"
+    :class "cv"}
+   {:source "content/svg.md"
+    :uri "svg"
+    :name "SVG"}])
 
 (defn gather-data [dir]
   (let [posts (parse-posts dir)
@@ -117,8 +129,7 @@
     {:posts (replace-tags posts tags)
      :tags tags
      :archives (group-by-month posts)
-     :cv (parse-cv)}))
-
+     :pages (map parse-md-page pages)}))
 
 ;; Static Assets
 ;;;;;;;;;;;;;;;;
@@ -152,30 +163,33 @@
   (run! #(render-resource % template) resources))
 
 (defn -main [& _args]
-  (do 
-    (println "Generating site...")
-    (let [data (gather-data posts-src-path)]
-      (when (not (fs/exists? public-dir))
-        (fs/create-dir public-dir))
-      (copy-asset-dirs)
+  (println "Generating site...")
+  (let [data (gather-data posts-src-path)]
+    (when (not (fs/exists? public-dir))
+      (fs/create-dir public-dir))
+    (copy-asset-dirs)
 
-      (println "\nRendering Feed")
-      (spit (fs/file (fs/path public-dir "feed.xml")) (feed/rss data))
+    (spit (fs/file (fs/path public-dir "404.html")) (html template/not-found))
 
-      (println "\nRendering Top Level")
-      (render-resource (assoc data :name "home" :uri "")
-                       template/home)
-      (render-resource (assoc data :uri "tags")
-                       template/tags)
-      (render-resource (assoc data :uri "posts")
-                       template/archives)
-      (render-resource (assoc data :uri "thirty-five")
-                       template/thirty-five)
-      (render-resource (:cv data) template/cv)
-      
-      (spit (fs/file (fs/path public-dir "404.html")) (html template/not-found))
-      (println "\nRendering Posts")
-      (render-resources (:posts data) template/post)
-      (println "\nRendering Tags")
-      (render-resources (:tags data) template/tag)
-      )))
+    (println "\nRendering Feed")
+    (spit (fs/file (fs/path public-dir "feed.xml")) (feed/rss data))
+
+    (println "\nRendering Top Level")
+    (render-resource (assoc data :name "home" :uri "")
+                     template/home)
+    (render-resource (assoc data :uri "posts")
+                     template/archives)
+    (render-resource (assoc data :uri "tags")
+                     template/tags)
+
+    (println "\nRendering Custom Pages")
+    (render-resource (assoc data :uri "thirty-five")
+                     template/thirty-five)
+    
+    (println "\nRendering Pages")
+    (render-resources (:pages data) template/md-page)
+    (println "\nRendering Posts")
+    (render-resources (:posts data) template/post)
+    (println "\nRendering Tags")
+    (render-resources (:tags data) template/tag)
+    ))
