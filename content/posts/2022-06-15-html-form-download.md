@@ -2,6 +2,10 @@
  :layout :post
  :tags ["html" "web" "hyperscript"]}
  
+## *Before you head down the rabbit hole*
+
+The approach described here is entirely unnecessary if you control the API: add the [`Content-Disposition: attachment` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition) to the response and the browser should download the file rather than display it.
+ 
 ## The Problem
 
 I want the user of a web page to be able select some parameters, then click a button that triggers the download of a document (in my case an SVG file) based on those selected parameters. The API being used is designed as a GET request with query parameters - this last bit is important for the approach described here to be viable.
