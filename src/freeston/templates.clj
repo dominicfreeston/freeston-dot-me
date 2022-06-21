@@ -43,6 +43,10 @@
   [:nav 
    [:ul 
     [:li [:a {:href "/"} "Home"]]
+    [:li [:a {:href "https://github.com/dominicfreeston"} "GitHub"]]
+    [:li [:a {:href "https://twitter.com/dominicfreeston"} "Twitter"]]]
+
+   [:ul 
     [:li [:a {:href "/posts"} "Posts"]]
     [:li [:a {:href "/tags"} "Tags"]]
     [:li [:a {:href "/feed.xml"} "RSS"]]]])
@@ -51,12 +55,13 @@
   [:html
    {:lang "en"} 
    (head h-seq)
-   [:body 
+   [:body
     [:div.header
-     [:a {:href "/" :class "freeston-title title-link"} "freeston"]
-     [:button#theme-toggle {:type "button"} ""]
-     [:a {:href "/" :class "freeston-title title-link"} "me"]]
-    top-nav
+     [:div.freeston-group
+      [:a {:href "/" :class "freeston-title title-link"} "freeston"]
+      [:button#theme-toggle {:type "button"} ""]
+      [:a {:href "/" :class "freeston-title title-link"} "me"]]
+     top-nav]
 
     body
     
@@ -81,8 +86,12 @@
   (base
    []
    [:div
-    [:h1 "Projects"]
+    [:h1 "Creations"]
     [:div.projects
+
+     [:a.project {:href "https://app.freeston.me/plottables"}
+      [:h2 "Plottables"]
+      [:p "Downloadable generative artwork for you to plot at home."]]
      
      [:a.project {:href "/thirty-five"}
       [:h2 "Thirty-Five"]
@@ -92,7 +101,7 @@
       [:h2 "The Wallslider"]
       [:p "An endless retro wall-jumping game for iOS and Android."]]]
     
-    [:h1 (str "Recent Posts")]
+    [:h1 "Recent Posts"]
     [:ul
      (map (fn [post]
             [:li (site-link post :title)])

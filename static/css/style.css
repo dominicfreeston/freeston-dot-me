@@ -174,16 +174,19 @@ ol {
 }
 
 nav {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
     font-weight: 400;
+    justify-content: flex-start;
 }
 
 nav ul {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem 0.5rem;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
     justify-content: flex-start;
-    
+    margin: 0;
 }
 
 nav a {
@@ -209,9 +212,18 @@ ul.hlist li {
 
 .header {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.freeston-group {
+    display: flex;
     align-items: center;
     gap: 0.5rem;
     justify-content: flex-start;
+    margin-right: 1rem;
 }
 
 button#theme-toggle {
@@ -314,7 +326,7 @@ footer {
     flex: 1;
     background-color: var(--pop-color);
     border-radius: 4rem;
-    min-width: 10em;
+    min-width: 12em;
     margin: 4px 0;
     padding: 16px 32px;
     text-align: center;
@@ -328,14 +340,10 @@ footer {
 }
 
 .project h2 {
-    margin: 0 0 12px 0;
+    margin-top: 0.5rem;
     font-size: 24px;
 }
 
-.project p {
-    margin: 0px;
-    align-content: center;
-}
 
 /* Image grid  */
 
