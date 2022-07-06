@@ -37,6 +37,17 @@ Software developer with 10 years of experience building consumer facing products
 
 - Java programming course: tuition, support, marking and feedback
 
+## Personal Projects
+
+**[The Wallslider](https://www.thewallslider.com)**
+- iOS and Android game built in Godot with a leaderboard powered by a Clojure backend
+
+**[Plottables](https://app.freeston.me/plottables/)**
+- Downloadable unique generative art pieces suitable for a pen plotter, created in Clojure
+
+**[Thirty-Five](https://freeston.me/thirty-five/)**
+- Thirty-Five days of Clojure generative art
+
 ## Education
 
 **2009-2011** [Queen Mary University of London](https://www.qmul.ac.uk), UK
