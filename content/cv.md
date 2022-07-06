@@ -2,14 +2,16 @@
 
 [Website](https://freeston.me) | [GitHub](https://github.com/dominicfreeston/) | [Twitter](https://twitter.com/dominicfreeston) | [Linked In](https://www.linkedin.com/in/dominicfreeston/)
 
-Software developer with 10 years of experience building consumer facing products in cross-functional teams, with a historical focus on iOS development in small to mid-size companies.
+I’m a software developer with 10 years of experience building consumer facing products in cross-functional teams. I’m mission driven and care deeply about creating open and communicative team dynamics. I enjoy collaborating with design and product to create beautiful, functional and polished experiences.
 
 ## Roles
 **2021-Current** Senior Software Developer; [LoveShark](https://loveshark.io); London, UK
 
-- Primary iOS developer and regular contributor to backend.
-- End-to-end development of key features: search, comments and user progression; from API design to custom animations
-- Developed automated tooling to facilitate our weekly release process and contributed extensively to our internal documentation
+- Primary iOS developer of flagship product: Mochi - a pioneering computer vision-based camera game app with social networking features
+- Regular contributor to backend, creating API endpoints and database models to support new features as well as general maintenance and bug fixes
+- Led end-to-end development of key features: search, comments and user progression; from API design to custom animations
+- Developed automated tooling to facilitate our weekly release process, saving hours of developer time per week
+- Championed best practices, mentored junior engineers and contributed extensively to internal documentation to ensure the tech team was well informed and cohesive
 
 **2017-2021** Senior Software Engineer; [Memrise](https://www.memrise.com); London, UK
 
@@ -19,7 +21,7 @@ Software developer with 10 years of experience building consumer facing products
 
 **2015-2017** iOS Developer; [Novoda](https://novoda.com); London, UK
 
-- Started up Novoda's iOS development department
+- Established and grew Novoda's iOS development department
 - Technical team lead on green field projects for a variety of clients
 - Mentoring of junior developers both internally and for our clients 
 
@@ -40,13 +42,16 @@ Software developer with 10 years of experience building consumer facing products
 ## Personal Projects
 
 **[The Wallslider](https://www.thewallslider.com)**
-- iOS and Android game built in Godot with a leaderboard powered by a Clojure backend
+
+iOS and Android retro-inspired game built in Godot with a leaderboard powered by a Clojure backend and Postgres database.
 
 **[Plottables](https://app.freeston.me/plottables/)**
-- Downloadable unique generative art pieces suitable for a pen plotter, created in Clojure
+
+Downloadable unique generative art pieces suitable for a pen plotter, created in Clojure with a sprinkle of htmx and hyperscript on the frontend for some progressive enhancement.
 
 **[Thirty-Five](https://freeston.me/thirty-five/)**
-- Thirty-Five days of Clojure generative art
+
+Thirty-Five days of Clojure generative art
 
 ## Education
 
