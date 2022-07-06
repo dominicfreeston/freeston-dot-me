@@ -109,7 +109,7 @@
     (site-link {:uri "posts"} "More posts")
 
     [:h1 "About"]
-    [:p "Welcome to my little corner of the internet. I'm Dominic, a software developer by day and a sometimes-generative-artist, sometimes-indie-game-dev and general code tinkerer and procrastinator by night. You can find out about my professional experience from " [:a {:href "/cv"} "my CV"] "."]
+    [:p "Welcome to my little corner of the internet. I'm Dominic, an app developer, generative-artist, indie-game-dev and general code tinkerer. You can find out about my recent personal work on this page and about my professional experience from " [:a {:href "/cv"} "my CV"] "."]
     ]))
 
 (defn tags [data]
