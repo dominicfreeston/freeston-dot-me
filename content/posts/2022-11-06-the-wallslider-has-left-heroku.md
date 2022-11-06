@@ -1,7 +1,7 @@
 {
-:title “The Wallslider has left Heroku”
+:title "The Wallslider has left Heroku"
 :layout :post
-:tags []
+:tags ["clojure" "web" "databases" "games" "the wallslider"]
 }
 
 Like a lot of people recently, I've moved away from Heroku. Not because they're [removing the free tier](https://blog.heroku.com/next-chapter), but because I was tired of spending $16 a month just to run the leaderboard of [my seldom played game](https://thewallslider.com).
@@ -12,8 +12,8 @@ The old stack: a [Clojure](https://clojure.org/) app that connects to a [Postgre
 
 But I still love my little game and I love those few players! So my main goals were:
 
-- free, or at least no additional costs
-- very little extra maintenance burden once the migration was done
+1. free, or at least no additional costs
+2. very little extra maintenance burden once the migration was done
 
 After exploring a few options[^flyio], I settled on the cutting edge approach of just using an existing server!
 
