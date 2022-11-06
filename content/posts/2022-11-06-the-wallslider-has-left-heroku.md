@@ -1,6 +1,8 @@
-{:title “The Wallslider has left Heroku”
- :layout :post
- :tags [“clojure” “web” “api” “database” “games” “the wallslider”]}
+{
+:title “The Wallslider has left Heroku”
+:layout :post
+:tags []
+}
 
 Like a lot of people recently, I've moved away from Heroku. Not because they're [removing the free tier](https://blog.heroku.com/next-chapter), but because I was tired of spending $16 a month just to run the leaderboard of [my seldom played game](https://thewallslider.com).
 
