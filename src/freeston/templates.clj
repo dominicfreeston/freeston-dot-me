@@ -43,13 +43,14 @@
   [:nav 
    [:ul 
     [:li [:a {:href "/"} "Home"]]
-    [:li [:a {:href "https://github.com/dominicfreeston"} "GitHub"]]
-    [:li [:a {:href "https://twitter.com/dominicfreeston"} "Twitter"]]]
-
-   [:ul 
     [:li [:a {:href "/posts"} "Posts"]]
     [:li [:a {:href "/tags"} "Tags"]]
-    [:li [:a {:href "/feed.xml"} "RSS"]]]])
+    [:li [:a {:href "/feed.xml"} "RSS"]]]
+   
+   [:ul
+    [:li [:a {:href "https://github.com/dominicfreeston" :rel "me"} "GitHub"]]
+    [:li [:a {:href "https://mastodon.gamedev.place/web/@dominic" :rel "me"} "Mastodon"]]
+    [:li [:a {:href "https://twitter.com/dominicfreeston" :rel "me"} "Twitter"]]]])
 
 (defn base [h-seq body]
   [:html
