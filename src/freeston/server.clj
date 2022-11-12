@@ -1,5 +1,3 @@
-(require '[babashka.pods :as pods])
-(pods/load-pod 'retrogradeorbit/bootleg "0.1.9")
 
 (ns freeston.server
   (:require [freeston.core :refer [public-dir]]
