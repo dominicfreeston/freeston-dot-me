@@ -1,3 +1,5 @@
+;; Copyright (c) 2022 Dominic Freeston
+
 (ns freeston.templates)
 
 (defn display-date
