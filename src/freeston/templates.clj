@@ -89,7 +89,7 @@
   (base
    []
    [:div
-    [:h1 "Creations"]
+    [:h1 "Art"]
     [:div.projects
 
      [:a.project {:href "https://app.freeston.me/plottables"}
@@ -99,10 +99,25 @@
      [:a.project {:href "/thirty-five"}
       [:h2 "Thirty-Five"]
       [:p "A thirty-five day challenge to produce one piece of generative art a day."]]
-     
+     ]
+
+    [:h1 "Games"]
+    [:div.projects
      [:a.project {:href "https://www.thewallslider.com/"}
       [:h2 "The Wallslider"]
-      [:p "An endless retro wall-jumping game for iOS and Android."]]]
+      [:p "An endless retro wall-jumping game for iOS and Android."]]
+     [:a.project {:href "https://animatch.freeston.me"}
+      [:h2 "AniMatch"]
+      [:p "A color and memory matching game for young children."]]
+     [:a.project {:href "https://dominicfreeston.itch.io/hey-thats-my-yarn"}
+      [:h2 "Hey, that's my yarn!"]
+      [:p "A game made with DragonRuby for the KIFASS game jam."]]]
+
+    [:h1 "Other"]
+    [:div.projects
+     [:a.project {:href "https://poplocal.co.uk"}
+      [:h2 "poplocal.co.uk"]
+      [:p "A hyper-local information website for parents of young children."]]]
     
     [:h1 "Recent Posts"]
     [:ul

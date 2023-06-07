@@ -5,7 +5,11 @@
 I’m a software developer with 10 years of experience building consumer facing products in cross-functional teams. I’m mission driven and care deeply about creating open and communicative team dynamics. I enjoy collaborating with design and product to create beautiful, functional and polished experiences.
 
 ## Roles
-**2021-Current** Senior Software Developer; [LoveShark](https://loveshark.io); London, UK
+**2022-Current** Senior Software Engineer; [Kroo](https://kroo.com); London, UK
+
+- Member of the Cloud Platform team.
+
+**2021-2022** Senior Software Developer; [LoveShark](https://loveshark.io); London, UK
 
 - Primary iOS developer of flagship product: Mochi - a pioneering computer vision-based camera game app with social networking features
 - Regular contributor to backend, creating API endpoints and database models to support new features as well as general maintenance and bug fixes
@@ -41,17 +45,7 @@ I’m a software developer with 10 years of experience building consumer facing 
 
 ## Personal Projects
 
-**[The Wallslider](https://www.thewallslider.com)**
-
-iOS and Android retro-inspired game built in Godot with a leaderboard powered by a Clojure backend and Postgres database.
-
-**[Plottables](https://app.freeston.me/plottables/)**
-
-Downloadable unique generative art pieces suitable for a pen plotter, created in Clojure with a sprinkle of htmx and hyperscript on the frontend for some progressive enhancement.
-
-**[Thirty-Five](https://freeston.me/thirty-five/)**
-
-Thirty-Five days of Clojure generative art
+See my [personal website (https://freeston.me)](https://freeston.me) for details about generative art, video games and other projects I've created.
 
 ## Education
 
