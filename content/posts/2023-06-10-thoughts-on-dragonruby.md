@@ -7,7 +7,7 @@
 
 Clojure is my favourite language at this point; I've been using it to make art and websites for a few years, and last year got my first job using it. I was all in and I'd never have to write in a lesser language again. And then I spent most of my spare time this year writing [small](https://animatch.freeston.me/) [games](https://dominicfreeston.itch.io/hey-thats-my-yarn) in [Ruby](https://github.com/dominicfreeston/kifass2023). What gives?
 
-The reason is I wanted to make games again, and the reason is the [DragonRuby Game Toolkit (DR)](https://dragonruby.itch.io/dragonruby-gtk). Many people come to DR because of Ruby, but I'm using it despite of Ruby. Here's some things I think it has going for it.
+The reason is I wanted to make games again, and the reason is the [DragonRuby Game Toolkit (DR)](https://dragonruby.itch.io/dragonruby-gtk). Many people come to DR because of Ruby, but I'm using it despite it using Ruby, so I thought I'd write down some things I think it has going for it that's not "you can write your game in Ruby".
 
 ## It's a 2D-first code-only engine
 
@@ -34,7 +34,7 @@ As someone's who's built mobile apps for a living and has seen the effort that c
 
 This comes with some caveats or limitations, like currently no shaders because doing this truly cross platforms is hard. A lot of these are tied to what [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer) supports (one of the [developers of DR is also a core contributor and maintainer of SDL](https://en.wikipedia.org/wiki/Ryan_C._Gordon)), and so some shader support might be on its way with SDL3, but in the meantime it has some features that can fill in a lot of the use cases for shaders in 2D and I can trust that my code will run pretty much identically on all platforms without modification.
 
-Building for Windows, Mac, Linux and Web with a single command is great - it can even deploy automatically to [itch.io](https://itch.io/) and has beta support for easier [Steam](https://store.steampowered.com/) deployment. I've not yet tried it's mobile support and I'm unlikely to ever ship to console, but I like to know they are available with a (quite reasonably priced) pro licence.
+Building for Windows, Mac, Linux and Web with a single command is great - it can even deploy automatically to [itch.io](https://itch.io/) and has beta support for easier [Steam](https://store.steampowered.com/) deployment. I've not yet tried its mobile support and I'm unlikely to ever ship to console, but I like to know they are available with a (quite reasonably priced) pro licence.
 
 ## Hot reload 
 
