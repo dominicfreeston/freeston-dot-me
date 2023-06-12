@@ -48,7 +48,7 @@ For the situations where your new code can't work with the current state, you ca
 
 ## A lovely supporting community on Discord
 
-The docs are somewhat lacking in places, but the community (which includes the developers themselves) is always there to help and support.
+The docs are somewhat lacking in places, but the [community on discord](https://discord.dragonruby.org/) (which includes the developers themselves) is always there to help and support.
 
 ## The End
 
