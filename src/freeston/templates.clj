@@ -51,8 +51,7 @@
    
    [:ul
     [:li [:a {:href "https://github.com/dominicfreeston" :rel "me"} "GitHub"]]
-    [:li [:a {:href "https://mastodon.gamedev.place/@dominic" :rel "me"} "Mastodon"]]
-    [:li [:a {:href "https://twitter.com/dominicfreeston" :rel "me"} "Twitter"]]]])
+    [:li [:a {:href "https://mastodon.gamedev.place/@dominic" :rel "me"} "Mastodon"]]]])
 
 (defn base [h-seq body]
   [:html
@@ -109,6 +108,9 @@
      [:a.project {:href "https://animatch.freeston.me"}
       [:h2 "AniMatch"]
       [:p "A color and memory matching game for young children."]]
+     [:a.project {:href "https://dominicfreeston.itch.io/komodo-rising"}
+      [:h2 "Komodo Rising"]
+      [:p "Low-rez high-octane bullet-hell action for LOWREZJAM."]]
      [:a.project {:href "https://dominicfreeston.itch.io/hey-thats-my-yarn"}
       [:h2 "Hey, that's my yarn!"]
       [:p "A game made with DragonRuby for the KIFASS game jam."]]]
